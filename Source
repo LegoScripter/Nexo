@@ -1,5 +1,11 @@
-HumanDied = false
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/XeneonPlays/Nexo/main/NexoReanimate'),true))()
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+
+if humanoid.RigType == Enum.HumanoidRigType.R15 then
+       loadstring(game:HttpGet(('https://raw.githubusercontent.com/XeneonPlays/Nexo/main/NexoR15Reanim'),true))()
+else
+       HumanDied = false
+       loadstring(game:HttpGet(('https://raw.githubusercontent.com/XeneonPlays/Nexo/main/NexoReanimate'),true))()
+end
 
 IT = Instance.new
 CF = CFrame.new
