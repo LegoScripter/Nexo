@@ -1,3 +1,4 @@
+
 local humanoid = game.Players.LocalPlayer.Character.Humanoid
 
 if humanoid.RigType == Enum.HumanoidRigType.R15 then
@@ -87,7 +88,7 @@ RH.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
 LH.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
 RS.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
 LS.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
-
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 70
 coroutine.wrap(function()
 while true do -- anim changer
 if HumanDied then break end
