@@ -87,8 +87,7 @@ RH.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
 LH.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
 RS.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
 LS.C0 = CF(0,0,0)*ANGLES(RAD(0),RAD(0),RAD(0))
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 70
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = 0
+game.Players.LocalPlayer.Character.WalkSpeed = 70
 coroutine.wrap(function()
 while true do -- anim changer
 if HumanDied then break end
@@ -99,15 +98,23 @@ elseif Root.Velocity.y < -1 then -- fall
 --fall clerp here
 elseif Root.Velocity.Magnitude < 2 then -- idle
 NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.sin(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.sin(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.sin(sine/13))),.1)
-RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),-2+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.sin(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.sin(sine/13))),.1)
-RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.sin(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(73+0*math.sin(sine/13)),RAD(11+0*math.cos(sine/13)),RAD(-18+0*math.sin(sine/13))),.1)
-LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.sin(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(73+0*math.sin(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(4+0*math.sin(sine/13))),.1)
-RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(89+0*math.sin(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.sin(sine/13))),.1)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),-1.6+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.sin(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.sin(sine/13))),.1)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.sin(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(80+0*math.sin(sine/13)),RAD(-18+0*math.cos(sine/13)),RAD(-36+0*math.sin(sine/13))),.1)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.sin(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(73+0*math.sin(sine/13)),RAD(11+0*math.cos(sine/13)),RAD(26+0*math.sin(sine/13))),.1)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(86+0*math.sin(sine/13)),RAD(-12+0*math.cos(sine/13)),RAD(0+0*math.sin(sine/13))),.1)
 LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(91+0*math.sin(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.sin(sine/13))),.1)
-hatset('FireMohawk','Torso',CFrame.new(),reanim['FireMohawk'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),-2+0*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(285+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),true)
-hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
-elseif Root.Velocity.Magnitude < 20 then -- walk
---walk clerp here
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+
+elseif Root.Velocity.Magnitude < 71 then -- walk
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.sin(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.sin(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.sin(sine/13))),.1)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),-1.6+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.sin(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.sin(sine/13))),.1)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0.5+0*math.sin(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(80+0*math.sin(sine/13)),RAD(-18+0*math.cos(sine/13)),RAD(-36+0*math.sin(sine/13))),.1)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.5+0*math.sin(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(73+0*math.sin(sine/13)),RAD(11+0*math.cos(sine/13)),RAD(26+0*math.sin(sine/13))),.1)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(86+0*math.sin(sine/13)),RAD(-12+0*math.cos(sine/13)),RAD(0+0*math.sin(sine/13))),.1)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(91+0*math.sin(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.sin(sine/13))),.1)
+hatset('MeshPartAccessory','Torso',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),1),false)
+
+
 elseif Root.Velocity.Magnitude > 20 then -- run
 --run clerp here
 end
